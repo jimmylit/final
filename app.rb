@@ -21,3 +21,9 @@ get "/" do
     @purchases = purchases_table.all.to_a
     view "purchases"
 end
+
+get "/purchases/:id" do
+    puts "params: #{params}"
+    @purchase = purchases_table.where(id: params["id"]).to_a[0]
+    view "purchase"
+end

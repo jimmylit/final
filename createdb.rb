@@ -13,7 +13,7 @@ DB.create_table! :purchases do
   String :comments, text: true
   String :purchase_location
 end
-DB.create_table! :bandwagoner do
+DB.create_table! :bandwagoners do
   primary_key :id
   foreign_key :event_id
   Boolean :onwagon
