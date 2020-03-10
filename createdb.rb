@@ -15,7 +15,7 @@ DB.create_table! :purchases do
 end
 DB.create_table! :bandwagoners do
   primary_key :id
-  foreign_key :event_id
+  foreign_key :purchase_id
   Boolean :onwagon
   String :name
   String :email

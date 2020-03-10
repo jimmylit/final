@@ -27,3 +27,8 @@ get "/purchases/:id" do
     @purchase = purchases_table.where(id: params["id"]).to_a[0]
     view "purchase"
 end
+
+get "/events/:id/bandwagoner/new" do
+    @purchases = purchases_table.where(id: params[:id]).to_a[0]
+    view "new_bandwagoner"
+end
