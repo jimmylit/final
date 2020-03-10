@@ -14,5 +14,10 @@ before { puts; puts "--------------- NEW REQUEST ---------------"; puts }       
 after { puts; }                                                                       #
 #######################################################################################
 
-events_table = DB.from(:events)
-rsvps_table = DB.from(:rsvps)
+purchases_table = DB.from(:purchases)
+bandwagoner_table = DB.from(:bandwagoners)
+
+get "/" do
+    @purchases = purchases_table.all.to_a
+    view "purchases"
+end
