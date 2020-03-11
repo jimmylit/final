@@ -1,6 +1,6 @@
 <h1> All Purchases </h1>
 
 <% for purchases in @purchases %>
-    <p> <a href = "/purchases/<%= purchases[:id]%>"> <%=purchases[:title]%> </a> </p>
+    <p> <a href = "/purchase/<%= purchases[:id]%>"> <%=purchases[:title]%> </a> </p>
 <% end %>
 

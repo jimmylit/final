@@ -6,7 +6,7 @@
         <div class = "media">
             <h3 class = "mt-4"><%= @purchase[:cost] %> </h3>
             <div class = "media-body align-self-end ml-5">
-                <a href="/events/<%=@event[:id]%>/bandwagoner/new" class="btn btn-primary"> Join the Bandwagon! </a>
+                <a href="/purchase/<%=@purchase[:id]%>/bandwagoner/new" class="btn btn-primary"> Join the bandwagon! </a>
             </div>    
         </div>
         <h3 class = "mt-5"> Final date to get on board: <%= @purchase[:purchase_date] %> </h3>
@@ -29,7 +29,7 @@
                 <p> No. </p>
             </div>
         </div>
-        <h3 class = "mt-5">Where we're buying from </h3>
+        <h3 class = "mt-5">Where the shipment will arrive </h3>
         <p class = "mt-2"><%= @purchase[:purchase_location] %></p>
     </div>
 </dif>

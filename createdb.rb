@@ -16,10 +16,10 @@ end
 DB.create_table! :bandwagoners do
   primary_key :id
   foreign_key :purchase_id
+  foreign_key :user_id
   Boolean :onwagon
-  String :name
-  String :email
   String :comments, text: true
+  Integer :number_of_items
 end
 
 # Insert initial (seed) data
